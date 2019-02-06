@@ -14,8 +14,8 @@ class NewsModel
     private $gateway;
     public function __construct(){
         try {
-            $this->con = new Connection('mysql:host=localhost:3306;dbname=dbalbouvard;charset=utf8','albouvard', 'dokkanbaptiste');
-            //$this->con = new Connection('mysql:host=localhost:3306;dbname=php;charset=utf8','root', '');
+            //$this->con = new Connection('mysql:host=localhost:3306;dbname=dbalbouvard;charset=utf8','albouvard', 'dokkanbaptiste');
+            $this->con = new Connection('mysql:host=localhost:3306;dbname=php;charset=utf8','root', ''); //VERSION HOME
             $this->gateway = new NewsGateway($this->con);
         }
         catch (Exception $e){

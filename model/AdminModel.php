@@ -15,8 +15,8 @@ class AdminModel
     private $gateway;
     public function __construct(){
         try {
-            $this->con = new Connection('mysql:host=localhost:3306;dbname=dbalbouvard;charset=utf8','albouvard', 'dokkanbaptiste'); //VERSION IUT
-            //$this->con = new Connection('mysql:host=localhost:3306;dbname=php;charset=utf8','root', '');
+            //$this->con = new Connection('mysql:host=localhost:3306;dbname=dbalbouvard;charset=utf8','albouvard', 'dokkanbaptiste'); //VERSION IUT
+            $this->con = new Connection('mysql:host=localhost:3306;dbname=php;charset=utf8','root', ''); //VERSION HOME
             $this->gateway = new AdminGateway($this->con);
         }
         catch (Exception $e){
